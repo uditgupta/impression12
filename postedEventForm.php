@@ -19,7 +19,7 @@
 	$event->checkUserNumberOfEvents($_POST['uid']);
 	if($event->num_of_events < 2)
 	{	
-		$event->postEventData($_POST['name'],$_POST['details'],$_POST['venue'],$_POST['time'],$_POST['category'],$_POST['type'],$_POST['uid']);
+		$event->postEventData(addslashes($_POST['name']),addslashes($_POST['details']),addslashes($_POST['rules']),addslashes($_POST['venue']),addslashes($_POST['time']),addslashes($_POST['category']),addslashes($_POST['type']),$_POST['uid']);
 		echo "<p>Your event has been registered. You can edit it on the website directly</p><a href=\"eventform.php\">Click here to register another event</a>";
 	}
 	else
