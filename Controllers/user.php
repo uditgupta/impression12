@@ -24,6 +24,8 @@ class user{
 	public function getUserdetails($uid){
 		$this->query_init->run_query('select', "SELECT * FROM impressions_personal_detail WHERE impressions_id = ".$uid);
 		$this->user_data = $this->query_init->result[0];
+		$this->query_init->run_query('select', "SELECT * FROM impressions_event WHERE event_editor_id = ".$this->user_data['id']);
+		$this->user_data=array_merge($this->user_data, array("events"=>$this->query_init->result));
 		$this->no_of_users = $this->query_init->result_count;
 		$this->db_init->close();
 	}
