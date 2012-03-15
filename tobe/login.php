@@ -58,7 +58,7 @@
  {'name':'phone',      'description':'Phone Number',             'type':'text'},
  {'name':'institution','description':'Institution Name',		 'type':'text'}
 ]" 
-  redirect-uri="http://impressions12.com/registeration.php"
+  redirect-uri="http://impressions12/registeration.php"
   width="530">
 </fb:registration>
 

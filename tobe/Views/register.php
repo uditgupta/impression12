@@ -16,13 +16,9 @@
 	margin-right:45%;
 	margin-top:5px;
 }
-#facebook-footer
-{
-	display:none;
-}
 </style>
 <div class="footer">
-<div class="footer-elements" id="facebook-footer">
+<div class="footer-elements">
 <!-- fb:like href="http://impressions12/" send="false" layout="button_count" width="100" show_faces="false" font="lucida grande"></fb:like -->
 <fb:login-button registration-url="http://impressions12.com/login.php" on-login="javascript:window.location.replace('eventform.php')">Log In to Register</fb:login-button>
 </div>

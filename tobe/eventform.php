@@ -9,13 +9,13 @@
 
 <body>
 
-<form action="postedEventForm.php" id="myform" style="display:none" method="post" >
+<form action="postedEventForm.php" id="myform" method="post">
 <table>
 	 <tr>
 		<td><label>Event-name</label></td><td><input name="name" type="text" maxlength="40" placeholder="eg. JRodies"/></td>
      </tr>
      <tr>
-	    <td><label>Event-details</label></td><td><textarea name="details" placeholder="eg. You dare to prove there is something in you. Show here.." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
+	    <td><label>Event-details</label></td><td><textarea name="details" placeholder="eg. You dare to prove there is something in you. Show here.." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="10"></textarea></td>
      </tr>
      <tr>
 	    <td><label>Event-venue</label></td><td><input name="venue" type="text" placeholder="eg. CL-2" maxlength="4"/></td>
@@ -40,9 +40,6 @@
 
 <div id="fb-root"></div>
 <script>
-$(document).ready(function(){
- document.getElementById("facebook-footer").style.display = "none";
-}); 
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '206972639316618', // App ID
@@ -53,7 +50,6 @@ $(document).ready(function(){
     });
     FB.getLoginStatus(function(response) {
   	if (response.status === 'connected') {
-		$("#myform").fadeIn("fast");
 	    // the user is logged in and connected to your
 	    // app, and response.authResponse supplies
 	    // the user's ID, a valid access token, a signed
@@ -64,7 +60,6 @@ $(document).ready(function(){
 	    $.post('userstatus.php',{"uid" : uid}, function(response){
 			if(response['response'] == 'ime'){
 				document.getElementById("hidid").value = response['user_id'];
-                      	 	document.getElementById("facebook-footer").style.display = "none";
 				//window.location.replace('sessional.php?ref='+response['response']);
 			}
 			else{
@@ -75,11 +70,9 @@ $(document).ready(function(){
 
 	    	window.location.replace('login.php');
 	  } else {
+		alert('hi');
 	
-		//window.location.replace('signin.php');
-                document.getElementById("facebook-footer").style.display = "block";
-		$("#myform").remove();
-	
+		window.location.replace('signin.php');
 		  // the user isn't even logged in to Facebook.
 	  }
  });
