@@ -33,5 +33,12 @@ class event{
 		$this->num_of_events = $this->query_init->result_count;
 
 	}
+	
+	public function getEventsByCategory($category)
+	{
+		$this->query_init->run_query('select',"SELECT * FROM impressions_event WHERE event_category = '".$category."'");
+		$this->event_data = array("events"=>$this->query_init->result);
+		$this->num_of_events = $this->query_init->result_count;
+	}
 }
 ?>
