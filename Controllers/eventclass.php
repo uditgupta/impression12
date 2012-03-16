@@ -28,10 +28,8 @@ class event{
 
 	public function checkUserNumberOfEvents($uid)
 	{
-		$this->query_init->run_query('select',"SELECT event_id FROM impressions_event WHERE event_editor_id=".$uid);
-
-		$this->num_of_events = $this->query_init->result_count;
-
+		$this->query_init->run_query('select',"SELECT COUNT(*) FROM impressions_event WHERE event_editor_id=".$uid);
+		$this->num_of_events = $this->query_init->result[0]['COUNT(*)'];
 	}
 	
 	public function getEventsByCategory($category)
