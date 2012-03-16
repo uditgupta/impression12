@@ -12,10 +12,10 @@
 <form action="postedEventForm.php" id="myform" style="display:none" method="post" onsubmit = "return validate();" >
 <table>
 	 <tr>
-		<td><label>Event-name</label></td><td><input name="name" type="text" maxlength="40" placeholder="eg. JRodies"/></td>
+		<td><label>Event-name</label></td><td><input name="name" type="text" id="name" maxlength="40" placeholder="eg. JRodies"/></td>
      </tr>
      <tr>
-	    <td><label>Event-details</label></td><td><textarea name="details" placeholder="eg. You dare to prove there is something in you. Show here.." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
+	    <td><label>Event-details</label></td><td><textarea name="details" id="details" placeholder="eg. You dare to prove there is something in you. Show here.." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
      </tr>
      <tr>
 	    <td><label>Event-rules</label></td><td><textarea name="rules" id="rules" placeholder="eg. 1. Only 2 players are allowed." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
@@ -27,16 +27,17 @@
 		<td><label>Event-contacts</label></td><td><textarea name="contacts" id="contacts" placeholder="eg. BOOHOO-9090909090" style="width:300px; height:70px; resize:none" wrap="soft" maxlength="100"></textarea></td>
 	</tr>
      <tr>
-	    <td><label>Event-venue</label></td><td><input name="venue" type="text" placeholder="eg. CL-2" maxlength="4"/></td>
+
+	    <td><label>Event-venue</label></td><td><input name="venue" type="text" id="venue" placeholder="eg. CL-2" maxlength="4"/></td>
      </tr>
      <tr>
-    	<td><label>Event-time</label></td><td><input name="time" type="text" maxlength="19" placeholder="eg. 11:00 AM - 01:00 PM"/></td>
+    	<td><label>Event-time</label></td><td><input name="time" type="text" maxlength="19" id="time" placeholder="eg. 11:00 AM - 01:00 PM"/></td>
      </tr>
      <tr>
-    	<td><label>Event-category</label></td><td><select name="category"><option>Technical</option><option>Cultural</option><option>Literary</option><option>Creative</option><option>Management</option></select></td>
+    	<td><label>Event-category</label></td><td><select name="category" id="category" ><option>Technical</option><option>Cultural</option><option>Literary</option><option>Creative</option><option>Management</option></select></td>
      </tr>
      <tr>
-	    <td><label>Event-type</label></td><td><select name="type"><option>Single</option><option>Group</option></select></td>
+	    <td><label>Event-type</label></td><td><select name="type" id="type"><option>Single</option><option>Group</option></select></td>
      </tr>
 	<tr>
 		<input type = "hidden" id="hidid" name = "uid" value=""/>
