@@ -9,7 +9,7 @@
 
 <body>
 
-<form action="postedEventForm.php" id="myform" style="display:none" method="post" >
+<form action="postedEventForm.php" id="myform" style="display:none" method="post" onsubmit = "return validate();" >
 <table>
 	 <tr>
 		<td><label>Event-name</label></td><td><input name="name" type="text" maxlength="40" placeholder="eg. JRodies"/></td>
@@ -119,8 +119,6 @@ $(document).ready(function(){
 <?php include_once('./Views/register.php'); ?>
 <script type="text/javascript" src="includes/javascripts/validate.js"></script>
 </body>
-<script>
-</script>
 
 </html>
  
