@@ -46,8 +46,8 @@
 	    <td><input type="submit" value="submit"/></td>
     </tr>
 </table>
+<label>* marked fields are required. You can also edit it later.</label>
 </form>
-<p>* marked fields are required. You can edit it later.</p>
 <div id="fb-root"></div>
 <script>
 $(document).ready(function(){
