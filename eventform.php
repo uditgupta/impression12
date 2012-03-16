@@ -47,7 +47,7 @@
     </tr>
 </table>
 </form>
-<p>You can also edit it later.</p>
+<p>* marked fields are required. You can edit it later.</p>
 <div id="fb-root"></div>
 <script>
 $(document).ready(function(){
