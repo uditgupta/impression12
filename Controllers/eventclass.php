@@ -38,11 +38,11 @@ class event{
 		$this->event_data = array("events"=>$this->query_init->result);
 		$this->num_of_events = $this->query_init->result_count;
 	}
-}
 	public function getEventData($event_id)
 	{
-		$this->query_init->run_query('select',"SELECT * FROM impression_event WHERE event_id = ".$event_id);
+		$this->query_init->run_query('select',"SELECT * FROM impressions_event WHERE event_id = ".$event_id);
 		$this->event_data = $this->query_init->result[0];
 		$this->num_of_events = $this->query_init->result_count;
 	}
+}
 ?>
