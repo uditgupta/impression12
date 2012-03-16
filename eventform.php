@@ -18,8 +18,14 @@
 	    <td><label>Event-details</label></td><td><textarea name="details" placeholder="eg. You dare to prove there is something in you. Show here.." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
      </tr>
      <tr>
-	    <td><label>Event-rules</label></td><td><textarea name="rules" placeholder="eg. 1. Only 2 players are allowed." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
+	    <td><label>Event-rules</label></td><td><textarea name="rules" id="rules" placeholder="eg. 1. Only 2 players are allowed." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
      </tr>
+	<tr>
+		<td><label>Event-requirements</label></td><td><textarea name="requirements" id="requirements" placeholder="eg. You have to bring your own laptop." style="width:300px; height:70px; resize:none" wrap="soft" maxlength="1500"></textarea></td>
+	</tr>
+     <tr>
+		<td><label>Event-contacts</label></td><td><textarea name="contacts" id="contacts" placeholder="eg. BOOHOO-9090909090" style="width:300px; height:70px; resize:none" wrap="soft" maxlength="100"></textarea></td>
+	</tr>
      <tr>
 	    <td><label>Event-venue</label></td><td><input name="venue" type="text" placeholder="eg. CL-2" maxlength="4"/></td>
      </tr>

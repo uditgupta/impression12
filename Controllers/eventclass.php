@@ -18,9 +18,9 @@ class event{
 		$this->query_init = new query($conn);
 	}
 
-	public function postEventData($event_name,$event_details,$event_venue,$event_time,$event_category,$event_type,$event_editor_id)
+	public function postEventData($event_name,$event_details,$event_rules,$event_requirements,$event_contacts,$event_venue,$event_time,$event_category,$event_type,$event_editor_id)
 	{
-		$this->query_init->run_query('insert',"INSERT INTO impressions_event (event_name,event_details,event_venue,event_time,event_category,event_type,event_editor_id) VALUES('".$event_name."','".$event_details."','".$event_venue."','".$event_time."','".$event_category."','".$event_type."',".$event_editor_id.")");
+		$this->query_init->run_query('insert',"INSERT INTO impressions_event (event_name,event_details,event_rules,event_requirements,event_contacts,event_venue,event_time,event_category,event_type,event_editor_id) VALUES('".$event_name."','".$event_details."','".$event_rules."','".$event_requirements."','".$event_contacts."','".$event_venue."','".$event_time."','".$event_category."','".$event_type."',".$event_editor_id.")");
 		$this->event_data = $this->query_init->result[0];
 		$this->num_of_events = $this->query_init->result_count;
 		
