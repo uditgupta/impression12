@@ -111,6 +111,7 @@ $(document).ready(function(){
 
 <div align="right"><p><a href="home.php">VISIT SITE</a></p></div>
 <?php include_once('./Views/register.php'); ?>
+<script type="text/javascript" src="includes/javascripts/validate.js"></script>
 </body>
 <script>
 </script>
