@@ -7,13 +7,13 @@ if($_REQUEST){
         $privilege = $user->user_data['privilege'];
 	$user_id = $user->user_data['id'];
 	if($privilege == '1'){
-		echo json_encode(array('response'=>'imu'));
+		echo json_encode(array('response'=>'imu','user_id'=>$user_id));
 	}	
 	else if( $privilege == '2'){
 		echo json_encode(array('response'=>'ime','user_id'=>$user_id));	
 	}
 	else if($privilege == '3'){
-		echo json_encode(array('response'=>'ima'));
+		echo json_encode(array('response'=>'ima','user_id'=>$user_id));
 	}
 }
 ?>
